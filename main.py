@@ -10,7 +10,7 @@ def main():
         "Main Menu\n",
         "1. Start Game\n",
         "2. Select fighters\n",
-        "3. Exit\n"
+        "0. Exit\n"
         )
         
         
@@ -19,20 +19,25 @@ def main():
         
         # checks user input and proceeds with corresponding function
         if selection == "1":
-            pass
+            print("starting game!")
+            # game loop initilized here
+            break
         
         if selection == "2":
-            pass
+            print("Select fighters")
+            # selection menu initialized here
+            break
 
-        if selection == "3":
+        if selection == "0":
+            print("exiting game")
             break
 
         else:
-            print("Invalid input, please select 1, 2 or 3 and press enter")
+            print("Invalid input, please select 1, 2 or 0 and press enter")
 
 
 def get_user_input_main_menu():
-    selection = input("type 1, 2 or 3 and press enter - "
+    selection = input("type 1, 2 or 0 and press enter - "
                     )
     return selection
     
