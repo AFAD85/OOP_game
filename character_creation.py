@@ -14,6 +14,9 @@ Preliminary design sketch:
 
 
 """
+import importlib
+import inspect
+
 
 
 
@@ -24,7 +27,14 @@ class PlayerCharacterSelection:
         self.character_1 = self.team_list[0]
         self.character_2 = self.team_list[1]
         self.character_3 = self.team_list[2]
+        
+    def get_classes(self, character_set):
+        self.module = importlib.import_module(f"{character_set}_classes")
+        self.classes = [x for x in inspect.getmembers(module, inspect.isclass) if x[1].__module__ == module.__name__]
 
+    def show_loaded_classes(self):
+        for character_class in self.classes:
+            print(character_class[0])
     
 
 # class ComputerCharacterSelection:
