@@ -17,7 +17,12 @@ Preliminary design sketch:
 import importlib
 import inspect
 
-
+class CharacterSelect():
+    def __init__(self) -> None:
+        pass
+    
+    def run(self):
+        pass
 
 
 class PlayerCharacterSelection:

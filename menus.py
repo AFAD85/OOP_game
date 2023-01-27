@@ -3,6 +3,11 @@ menu file
 
 """
 import sys
+from game import GameLoop
+from character_selection import CharacterSelect
+
+
+
 
 
 class MainMenu:
@@ -33,10 +38,15 @@ class MainMenu:
 
     def option_1(self):
         print("Starting Game!")
+        game = GameLoop()
+        game.execute_fight_turn
+        
 
     def option_2(self):
         print("Character select")
-
+        character_select = CharacterSelect
+        character_select.run()
+        
     def option_3(self):
         print("Settings")
 
