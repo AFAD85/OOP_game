@@ -43,13 +43,54 @@ class Pokemon(Fighter):
         
 class Charmander(Pokemon):
     
-    def __init__(self, name, health, controler, type: str):
+    def __init__(self, name, health, controler):
         super().__init__(name, health, controler)
         self.name = name
         self.health = health
         self.controler = controler
-        self.type = type
+        self.type = "Fire"
         self.attack_power = int()
+        
+class Pikachu(Pokemon):
+    
+    def __init__(self, name, health, controler):
+        super().__init__(name, health, controler)
+        self.name = name
+        self.health = health
+        self.controler = controler
+        self.type = "Lightning"
+        self.attack_power = int()
+        
+class Squirtle(Pokemon):
+    
+    def __init__(self, name, health, controler):
+        super().__init__(name, health, controler)
+        self.name = name
+        self.health = health
+        self.controler = controler
+        self.type = "Water"
+        self.attack_power = int()
+        
+class Bulbasaur(Pokemon):
+    
+    def __init__(self, name, health, controler):
+        super().__init__(name, health, controler)
+        self.name = name
+        self.health = health
+        self.controler = controler
+        self.type = "Plant"
+        self.attack_power = int()
+
+class MisterMime(Pokemon):
+    
+    def __init__(self, name, health, controler):
+        super().__init__(name, health, controler)
+        self.name = name
+        self.health = health
+        self.controler = controler
+        self.type = "Nightmare"
+        self.attack_power = int()
+        
 
 
 class PlayerCharacterSelection:
