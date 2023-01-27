@@ -56,9 +56,10 @@ class Charmander(Pokemon):
         self.type = "Fire"
         self.attack_power = int()
         
-    def special_attack(self, special_attack_name, special_attack_type):
-        self.name = "Fire breath"
-        self.type =         
+    def special_attack(self):
+        self.special_attack_name = "Fire breath"
+        self.special_attack_type = "Fire"
+        self.special_attack_damage = int()
         
     def set_attack_power(self, attack_power):
         """
