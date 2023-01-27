@@ -18,7 +18,7 @@ class Fighter(ABC):
 
 
 
-class Pokemon(Fighter):
+class Pokemon(Fighter, ABC):
     
     def __init__(self, name: str, health: int, controler: str):
         super().__init__(name, health, controler)
@@ -27,18 +27,23 @@ class Pokemon(Fighter):
         self.attack_power = int()
         self.knocked_out = False
         self.controler = controler
-        
-    def attack(self, opponent):
-        opponent.health -= self.attack_power  
-
-    def set_attack_power(self, attack_power):
-        """
-        Sets the attack power of the pokemon
-        """
-        self.attack_power = attack_power
-        
+    
+    @abstractmethod
+    def attack(self):
+        pass
+  
+    @abstractmethod
+    def set_attack_power(self):
+        pass
+    
+    @abstractmethod  
+    def special_attack(self):
+        pass    
+    
     def display_stats(self):
         print(f"{self.name} has {self.health} left.")
+    
+
         
         
 class Charmander(Pokemon):
@@ -51,6 +56,16 @@ class Charmander(Pokemon):
         self.type = "Fire"
         self.attack_power = int()
         
+    def special_attack(self, special_attack_name, special_attack_type):
+        self.name = "Fire breath"
+        self.type =         
+        
+    def set_attack_power(self, attack_power):
+        """
+        Sets the attack power of the pokemon
+        """
+        self.attack_power = attack_power
+        
 class Pikachu(Pokemon):
     
     def __init__(self, name, health, controler):
@@ -60,6 +75,8 @@ class Pikachu(Pokemon):
         self.controler = controler
         self.type = "Lightning"
         self.attack_power = int()
+        
+
         
 class Squirtle(Pokemon):
     
