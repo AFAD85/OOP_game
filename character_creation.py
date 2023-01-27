@@ -1,5 +1,19 @@
-from abc import ABC, abstractmethod
+"""
+File containing character selection logic, will be called by main on user input
+will itself look either directly at specified classes file or use character selection interface (still working out the logic)
 
+
+Preliminary design sketch:
+1 main file is used to call for character selection
+2 character selection is initialized based on whos team (player or computer) is being defined
+3 character classes are loaded and displayed
+4 user selects a character and sets required values (name etc.)
+5 repeated untill team is full
+6 team object is returned to main which picks it up and allows for it to be used in the game loop
+
+
+
+"""
 
 
 
