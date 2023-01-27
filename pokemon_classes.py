@@ -3,7 +3,7 @@ this file contains all pokemon classes, and super classes
 super classes placed here for the time being, will be moved later
 
 """
-
+from abc import ABC, abstractmethod
 
 
 class Fighter(ABC):
