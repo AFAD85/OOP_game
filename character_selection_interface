@@ -9,7 +9,7 @@ the idea is to have the game be modular and only load the available characters d
 
 
 # Import the file containing the Pokemon classes
-module = importlib.import_module("character_creation")
+module = importlib.import_module("pokemon_classes")
 
 # Get all the classes defined in the imported module
 pokemon_classes = [x for x in inspect.getmembers(module, inspect.isclass) if x[1].__module__ == module.__name__]
