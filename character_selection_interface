@@ -1,0 +1,19 @@
+import importlib
+import inspect
+
+"""
+temp file with code to import classes from a file containing classes of a certain set of fighters, right now just pokemon applies. 
+the idea is to have the game be modular and only load the available characters depending on player selection
+"""
+
+
+
+# Import the file containing the Pokemon classes
+module = importlib.import_module("character_creation")
+
+# Get all the classes defined in the imported module
+pokemon_classes = [x for x in inspect.getmembers(module, inspect.isclass) if x[1].__module__ == module.__name__]
+
+# Print the name of each class
+for pokemon_class in pokemon_classes:
+    print(pokemon_class[0])
