@@ -1,5 +1,5 @@
 from character_creation import PlayerCharacterSelection, ComputerCharacterSelection
-
+from game import GameLoop
 
 
 def main():
@@ -24,8 +24,16 @@ def main():
         # checks user input and proceeds with corresponding function
         if selection == "1":
             print("starting game!")
+            
             # game loop initilized here
-            break
+            player = None# object made in character creation
+            computer = None# object made in character creation
+            if not player or computer:
+                print("No characters selected, please use the character creator before starting the game.")
+                main()
+            game = GameLoop(player, computer)
+            game.execute_fight_turn()
+
         
         if selection == "2":
             print("Select fighters")
