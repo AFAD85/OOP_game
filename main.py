@@ -1,6 +1,6 @@
 from character_creation import PlayerCharacterSelection, ComputerCharacterSelection
 from game import GameLoop
-
+from menus import MainMenu, CharacterSelectionMenu
 
 
 
@@ -11,13 +11,9 @@ def main():
 
     
     while True:
-        print(f"-------------------------------------\n",
-        "Welcome to Pokemon fighting!\n",
-        "Main Menu\n",
-        "1. Start Game\n",
-        "2. Select fighters\n",
-        "0. Exit\n"
-        )
+
+        menu = MainMenu()
+        menu.display_menu()
         
         
         # asks user for input
