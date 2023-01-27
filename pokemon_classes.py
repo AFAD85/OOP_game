@@ -2,6 +2,10 @@
 this file contains all pokemon classes, and super classes
 super classes placed here for the time being, will be moved later
 
+to be done:
+convert fighter to interface in character creation
+
+
 """
 from abc import ABC, abstractmethod
 
